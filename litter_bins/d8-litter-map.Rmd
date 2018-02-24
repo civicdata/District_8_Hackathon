@@ -1,0 +1,27 @@
+---
+title: "District 8 Litter Bins"
+author: ""
+date: "`r Sys.Date()`"
+output:
+  prettydoc::html_pretty:
+    theme: architect
+    highlight: github
+---
+
+There is a lot of foot traffic in District 8, especially along the Bardstown-Baxter cooridor.  At the District 8 hackathon on 2/24/18, we took a look at the placement of litter bins along these streets and the distance between businesses and litter bins.
+
+To accomplish this task, we attempted to approximate [this map](https://lojic.maps.arcgis.com/apps/StorytellingSwipe/index.html?appid=c0a178271fcb420a86bb23fca7cfde6e#).  We used the results of the [District 8 litter bin survey](https://drive.google.com/drive/u/0/folders/1LoO2PAEm_5OK0tzGNFVSjyHl33po2xHi), and a shapefile of LIBA (Louisville Independent Business Alliance) members.  There are a few limitations that we would like to resolve before making many decisions about placement of litter bins: adding other businesses and including information about TARC stops would be good examples.
+
+After viewing the original map, we made a few estimates as to where we would put a potential 25 new litter bins.  These potential new litter bins reduce the distance between a LIBA business and a litter bin by an average of 3%.  (Update with distance in feet when we can figure it out).  While that distance doesn't seem like a lot, according to research by ["Keep America Beautiful"](https://www.kab.org/sites/default/files/News%26Info_Publications_BeingaGoodNeighbor_AGuidetoReducingandManagingLitter.pdf) shows that reducing the distance to a litter bin from 50 feet to 40 feet equates to a 23% reducion in litter.
+
+Here's the map we made:
+
+```{r, echo=F, warning=F, message=F}
+library(tidyverse)
+library(leaflet)
+litter <- read_rds('litter_map.rds')
+
+litter
+```
+
+***

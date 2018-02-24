@@ -1,0 +1,10 @@
+LIBA_Members: This shapefile shows where each Louisville Independent Business 
+Association (LIBA) Member is located in Louisville. 
+
+Status: Is the address Matched or Unmatched
+Score: The match score when the data was georeferenced
+Organizati: The name of the Organization
+Category: What type of business is it?
+Main-Addre: The stree address in which the business is located
+City: The city in which the business is located
+State: The state in which the business is located
